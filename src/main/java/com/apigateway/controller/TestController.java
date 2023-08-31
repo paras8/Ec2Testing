@@ -17,10 +17,10 @@ public class TestController {
 	public String getData()
 	{
 		String response = "Test  Data From Service 1";
-//		String secondService = "http://3.110.90.34:8082/api/get/Test2"; 
-//    
-//	     response =  restTemplate.getForObject(secondService,String.class);
-//	
+		String secondService = "http://3.110.90.34:8082/api/get/Test2"; 
+    
+	     response =  restTemplate.getForObject(secondService,String.class);
+	
 		return response;
 		
 	}
