@@ -2,6 +2,7 @@ package com.apigateway.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,8 +15,9 @@ public class TestController2 {
 	
 	
 	@GetMapping("/get/Test2")
-	public String getData(HttpServletRequest request)
-	{   String header = request.getHeader("Authorization");
+	public String getData(@RequestHeader("Authorization") String header)
+	{  
+//		String header = request.getHeader("Authorization");
 	System.out.println(header);
 		return header+"  Test  Data From Service 2 ADMIN";
 	}
