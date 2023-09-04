@@ -17,7 +17,7 @@ public class TestController {
 	public String getData()
 	{
 		String response = "Test  Data From Service 1";
-		String secondService = "http://13.127.47.128:8082/api/get/Test2"; 
+		String secondService = "http://13.127.64.164:8082/api/get/Test2"; 
     
 	     response =  restTemplate.getForObject(secondService,String.class);
 	
