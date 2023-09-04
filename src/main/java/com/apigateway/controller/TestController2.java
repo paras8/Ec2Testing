@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 public class TestController2 {
 
 	
-	@PreAuthorize("hasRole('ADMIN')")
+	
 	@GetMapping("/get/Test2")
 	public String getData(HttpServletRequest request)
 	{   String header = request.getHeader("Authorization");
