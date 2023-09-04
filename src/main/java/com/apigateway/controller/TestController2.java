@@ -1,6 +1,7 @@
 package com.apigateway.controller;
 
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 public class TestController2 {
 
 	
-	
+	@PreAuthorize("hasRole('ADMIN')")
 	@GetMapping("/get/Test2")
 	public String getData(@RequestHeader("Authorization") String header)
 	{  
@@ -21,7 +22,7 @@ public class TestController2 {
 	System.out.println(header);
 		return header+"  Test  Data From Service 2 ADMIN";
 	}
-//	@PreAuthorize("hasRole('USER')")
+	@PreAuthorize("hasRole('USER')")
 	@GetMapping("/getUser/Test2")
 	public String getDat()
 	{
