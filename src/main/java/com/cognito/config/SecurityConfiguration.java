@@ -27,7 +27,7 @@ public class SecurityConfiguration {
         http.csrf(csrf -> csrf.disable())
         .authorizeHttpRequests(request -> request.requestMatchers("/callback").permitAll()
         		.anyRequest().authenticated())
-                .oauth2Login(oauth -> oauth.redirectionEndpoint(endPoint -> endPoint.baseUri("http://65.1.134.142:8080/callback")));
+                .oauth2Login(oauth -> oauth.redirectionEndpoint(endPoint -> endPoint.baseUri("https://65.1.134.142:8080/callback")));
 //                        .userInfoEndpoint(userInfoEndpointConfig -> userInfoEndpointConfig.userAuthoritiesMapper(userAuthoritiesMapper())))
 //                .logout(logout -> logout.logoutSuccessUrl("/"));
         return http.build();
