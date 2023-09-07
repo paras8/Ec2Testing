@@ -42,7 +42,7 @@ public class WelcomeController {
         map.add("code", code);
         map.add("client_id", "4sk3sll5el6glat18fb22ek1ts");
         map.add("client_secret", "n8pl0c24ikumbho8rm7lpb1tmromn76tv9mjgkir8618c5c84b7");
-        map.add("redirect_uri", "https://65.1.134.142:8080/callback"); // Ensure this matches the configured callback URL
+        map.add("redirect_uri", "https://localhost:8443/callback"); // Ensure this matches the configured callback URL
 
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
 
