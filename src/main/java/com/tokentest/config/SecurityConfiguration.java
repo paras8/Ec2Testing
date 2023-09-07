@@ -56,7 +56,7 @@ public class SecurityConfiguration {
         // Create a NimbusJwtDecoder with the JWKS URI provided by Amazon Cognito
         //String jwksUri = "https://cognito-idp.us-east-1.amazonaws.com/YOUR_USER_POOL_ID/.well-known/jwks.json";
        
-        String jwksUri = "https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_DvJMQyd30/.well-known/jwks.json"; 
+        String jwksUri = "https://cognito-idp.ap-south-1.amazonaws.com/ap-south-1_jiWkiEq81/.well-known/jwks.json"; 
         return NimbusJwtDecoder.withJwkSetUri(jwksUri)
             .build();
     }

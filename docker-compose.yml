@@ -1,0 +1,9 @@
+services:
+   app:
+    build: .
+    container_name: tokentesting_container
+    ports:
+      - 8081:8081
+    restart: always
+  
+           
