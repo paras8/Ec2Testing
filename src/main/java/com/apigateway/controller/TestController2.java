@@ -20,7 +20,7 @@ public class TestController2 {
 	{  
 //		String header = request.getHeader("Authorization");
 	System.out.println(header);
-		return header+"  Test  Data From Service 2 ADMIN";
+		return " Test  Data From Service 2 ADMIN";
 	}
 	@PreAuthorize("hasRole('USER')")
 	@GetMapping("/getUser/Test2")
