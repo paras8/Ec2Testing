@@ -23,9 +23,9 @@ public class WelcomeController {
 	@Autowired
 	private RestTemplate restTemplate;
 	
-	@GetMapping("/user/greetMe")
-	public String userGreet() {
-		return "I am the User";
+	@GetMapping("/movie/application/login")
+	public void userGreet() {
+		
 	}
 	
 	@GetMapping("/callback")
@@ -42,7 +42,7 @@ public class WelcomeController {
         map.add("code", code);
         map.add("client_id", "4sk3sll5el6glat18fb22ek1ts");
         map.add("client_secret", "n8pl0c24ikumbho8rm7lpb1tmromn76tv9mjgkir8618c5c84b7");
-        map.add("redirect_uri", "https://65.1.134.142:8443/callback"); // Ensure this matches the configured callback URL
+        map.add("redirect_uri", "https://localhost:8443/callback"); // Ensure this matches the configured callback URL
 
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
 
@@ -63,18 +63,6 @@ public class WelcomeController {
         }
     }
 	
-	
-	@PreAuthorize("hasRole('ADMIN')")
-	@GetMapping("/admin/greetMe")
-	public String adminGreet() {
-		return "I am the Admin";
-	}
-	
-	@PreAuthorize("hasRole('USER')")
-	@PostMapping("/user/add")
-	public String addUser(@RequestBody User myname) {
-		return myname.getName();
-	}
 	
 	
 }
